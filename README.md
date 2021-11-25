@@ -117,6 +117,12 @@ Then you need to change the field of `im_root` and `train/val_im_anns` in the co
 I used the following command to train the models:
 
 ```bash
+# bisenetv1 slamdata(lib/slam_base_dataset.py，lib/slamdata_cv2.py，lib/get_dataloader.py)
+export CUDA_VISIBLE_DEVICES=0,1
+cfg_file=configs/bisenetv1_slam.py
+NGPUS=2
+python -m torch.distributed.launch --nproc_per_node=$NGPUS tools/train_amp.py --config $cfg_file 
+
 # bisenetv1 cityscapes
 export CUDA_VISIBLE_DEVICES=0,1
 cfg_file=configs/bisenetv1_city.py
