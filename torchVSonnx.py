@@ -10,8 +10,8 @@ from lib.models import model_factory
 
 # args
 parse = argparse.ArgumentParser()
-parse.add_argument('--onnxmodel', dest='onnx_model_path', type=str, default='./res/model.onnx',)
-parse.add_argument('--torchmodel', dest='torch_model_path', type=str, default='./res/model_final.pth',)
+parse.add_argument('--onnxmodel', dest='onnxmodel', type=str, default='./res/model.onnx',)
+parse.add_argument('--torchmodel', dest='torchmodel', type=str, default='./res/model_final.pth',)
 parse.add_argument('--img-path', dest='img_path', type=str, default='./example.png',)
 args = parse.parse_args()
 
@@ -35,6 +35,7 @@ onnx_out = sess.run(None, {'input_image': to_numpy(dummy_input)})
 
 # torch 模型
 net = model_factory['bisenetv1'](10, aux_mode='pred')
+# net = model_factory['bisenetv2'](10, aux_mode='pred')
 net.load_state_dict(torch.load(args.torchmodel, map_location='cpu'), strict=False)
 net.eval()
 with torch.no_grad():
