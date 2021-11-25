@@ -163,7 +163,13 @@ $ python tools/evaluate.py --config configs/bisenetv1_city.py --weight-path /pat
 ```
 
 
+## contrast onnx torch results
+You can also check the difference of difference between onnx and torch models(bisenetv1):
+```
+$ python torchVSonnx.py --onnxmodel res/model.onnx --torchmodel res/model.pth --img-path example.png
+```
+
+
 ### Be aware that this is the refactored version of the original codebase. You can go to the `old` directory for original implementation if you need, though I believe you will not need it.
 
 
-#start learn git from this pj, create a new fea branch
