@@ -1,0 +1,23 @@
+
+cfg = dict(
+    model_type='ScnnStdcBiSeNetV1',
+    n_cats=10,
+    num_aux_heads=2,
+    lr_start=1e-2,
+    weight_decay=5e-4,
+    warmup_iters=1000,
+    max_iter=60000,
+    dataset='SlamData',
+    im_root='/home/audituser/cyr/STDC-Seg-parkingslot/parkingSlot/planform',
+    train_im_anns='./datasets/cityscapes/train.txt',
+    val_im_anns='./datasets/cityscapes/val.txt',
+    scales=[0.75, 2.],
+    cropsize=[768, 768],
+    eval_crop=[768, 768],
+    eval_scales=[0.5, 0.75, 1.0, 1.25, 1.5, 1.75],
+    ims_per_gpu=8,
+    eval_ims_per_gpu=2,
+    use_fp16=True,
+    use_sync_bn=False,
+    respth='./res',
+)
