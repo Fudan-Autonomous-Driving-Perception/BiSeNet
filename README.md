@@ -1,3 +1,19 @@
+# 实验
+|实验|服务器|卡数|iter|ims_per_gpu|lr|交通标志牌 杆状物 路面标识(分辨率）|速度
+|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:
+BiSeNetV1-A2D2 | V100 | 2 | 80000 | 8 | cosLR | 71.5 46.1 45.9(原图) | 实时
+BiSeNetV2-A2D2 | V100 | 2 | 80000 | 8 | cosLR | 70.4 46.8 41.8(原图) | 实时
+STDCSCNNBiSeNet-A2D2 | V100 | 2 | 80000 | 8 | cosLR | 63.9 43.4 29.1(原图） | 实时
+STDC-A2D2 | V100 | 1 | 60000 | 12 | cosLR | 68.4 41.1 54.1(768, 1024) | 实时
+STDC(add a branch)-A2D2 | V100 | 1 | 160000 | 6 | cosLR | 67.3 45.2 49.7(768, 1024) | /
+STDC(like Unet)-A2D2 | V100 | 1 | 240000 | 4 | cosLR | 69.7 48.3 54.2(768, 1024) | /
+
+|实验|服务器|卡数|iter|ims_per_gpu|lr| miou |分辨率|速度
+|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:
+BiSeNetV1-仿真 | V100 | 2 | 60000 | 8 | cosLR | 0.817105 | (1024, 1024) | 实时
+BiSeNetV2-仿真 | V100 | 2 | 60000 | 8 | cosLR | 0.808538 | (1024, 1024) | 实时
+STDCSCNNBiSeNet-仿真 | V100 | 2 | 60000 | 8 | cosLR | 0.810489 | (1024, 1024) | 实时
+
 # BiSeNetV1 & BiSeNetV2
 
 My implementation of [BiSeNetV1](https://arxiv.org/abs/1808.00897) and [BiSeNetV2](https://arxiv.org/abs/2004.02147).
