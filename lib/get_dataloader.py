@@ -8,7 +8,7 @@ from lib.sampler import RepeatedDistSampler
 from lib.cityscapes_cv2 import CityScapes
 from lib.slamdata_cv2 import SlamData
 from lib.coco import CocoStuff
-
+from lib.a2d2_cv2 import A2D2Data
 
 
 class TransformationTrain(object):
