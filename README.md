@@ -7,6 +7,7 @@ STDCSCNNBiSeNet-A2D2 | V100 | 2 | 80000 | 8 | cosLR | 63.9 43.4 29.1(原图）| 
 STDC-A2D2 | V100 | 1 | 60000 | 12 | cosLR | 68.4 41.1 54.1(768, 1024) | 实时
 STDC(add a branch)-A2D2 | V100 | 1 | 160000 | 6 | cosLR | 67.3 45.2 49.7(768, 1024) | /
 STDC(like Unet)-A2D2 | V100 | 1 | 240000 | 4 | cosLR | 69.7 48.3 54.2(768, 1024) | /
+BiSeNetV1(Swin-Tiny)-A2D2 | V100 | 1 | 160000 | 8 | WarmupPolyLr | 68.67 44.47 38.78(原图)<br>69.07 43,31 44.12(512x1024,single-scale)<br>72.09 47.46 41.40(512x1024,multi-scale flip)<br>71.85 45.21 44.91(512x1024,multi-scale) | 42.1FPS (512x1024)
 
 |实验|服务器|卡数|iter|ims_per_gpu|lr| miou |分辨率|速度
 |:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:
